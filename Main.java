@@ -20,7 +20,7 @@ public class Main {
         triviaAnswers[0] = "18";
         triviaAnswers[1] = "89";
         triviaAnswers[2] = "Blood";
-        triviaAnswers[3] = "Damage_Control";
+        triviaAnswers[3] = "Damage Control";
         triviaAnswers[4] = "Diamond";
 
         int score = 0;
@@ -28,7 +28,7 @@ public class Main {
         while (true) {
             for (int q = 0; q < triviaQuestions.length; q++) {
                 printQuestions(triviaQuestions[q]);
-                String inputAnswer = scanner.next();
+                String inputAnswer = scanner.nextLine();
 
                 if(isCorrect(inputAnswer, triviaAnswers[q])) {
                     System.out.println("That is correct!");
@@ -41,9 +41,8 @@ public class Main {
             }
             System.out.println("You got " + score + " out of 5 correct!");
             System.out.println("Would you like to try again? Yes or No");
-            if (scanner.next().equals("Yes")) {
+            if (scanner.nextLine().equals("Yes")) {
                 score = 0;
-                continue;
             } else {
                 break;
             }
